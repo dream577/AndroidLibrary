@@ -29,8 +29,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val manager = SpannableGridLayoutManager(TwoWayLayoutManager.Orientation.HORIZONTAL, 3, 3)
         manager.ratio = 16 / 9f
 
-//        val manager = GridLayoutManager(this,2, RecyclerView.HORIZONTAL, false)
-
         source = mutableListOf()
         for (i in 0..100) {
             source.add(i.toString())
@@ -45,7 +43,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v?.id) {
             mButton.id -> {
-                mAdapter.exchange(1, 2)
+                mAdapter.exchange(0, 3)
             }
         }
     }

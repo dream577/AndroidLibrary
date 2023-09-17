@@ -20,7 +20,7 @@ class LiveAdapter() : RecyclerView.Adapter<LiveAdapter.ViewHolder>() {
 
     fun exchange(source: Int, target: Int) {
         Collections.swap(sourceList, source, target)
-        notifyItemMoved(source, target)
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
